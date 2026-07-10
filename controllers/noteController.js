@@ -42,7 +42,6 @@ const getNote = async (req,res) => {
 
 const updateNote = async (req,res) => {
     try{
-
         const id = req.params.id;
         const {title,description }= req.body;
         const updatedNote = {

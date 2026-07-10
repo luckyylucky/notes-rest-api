@@ -1,19 +1,18 @@
 {
   "name": "notes-api-v2",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "RESTful Notes API built with Node.js, Express.js, MongoDB Atlas and Mongoose",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Lucky Rupreja",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "mongo": "^0.1.0",
     "mongoose": "^9.7.3"
   }
 }
