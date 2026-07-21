@@ -28,7 +28,7 @@ The API allows users to create, read, update, and delete notes while following t
 
 Clone the repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/luckyyylucky/notes-rest-api.git
 ```
 Install dependencies
 ```bash
@@ -43,7 +43,7 @@ node server.js
 ## Environment Variables
 Create a `.env` file in the project root and add:
 ```env
-MONGO_URI=your_mongodb_connection_string
+MONGO_URI=<your_mongodb_connection_string>
 ```
 
 ## API Endpoints
@@ -68,6 +68,10 @@ MONGO_URI=your_mongodb_connection_string
 - Pagination
 - Search Notes
 - Filter Notes
+
+## 🌐 Live API
+Render Deployment:
+https://notes-rest-api-tgum.onrender.com
 
 ## 👨‍💻 Author
 Lucky Rupreja

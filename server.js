@@ -4,21 +4,18 @@ const express = require("express");
 const connectDB = require("./config/db");
 const noteRoute = require("./routes/noteRoutes");
 
-
 const app = express();
+
 app.use(express.json());
 
- (async () => {
+app.use("/notes", noteRoute);
+
+const PORT = process.env.PORT || 3000;
+
+(async () => {
     await connectDB();
-    
-    app.listen(3000,() => {
-    console.log("Server Running");
 
-    
-    app.use("/notes",noteRoute);
-    app.use("/notes",noteRoute);
-    app.use("/notes/:id",noteRoute);
-    app.use("/notes",noteRoute);
-
-});
- })();
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+    });
+})();
