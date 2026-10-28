@@ -107,8 +107,8 @@ const deleteNote = async (req,res) => {
         });
 
         if(result.deletedCount === 0){
-            return res.status(404).json({
-                message : "Note not found or you don't have permission to delete it"
+            return res.status(403).json({
+                message : "Access Denied"
             })
         }
 
