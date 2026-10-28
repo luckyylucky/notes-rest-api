@@ -98,8 +98,8 @@ Authorization: Bearer <your_jwt_token>
 
 | Method | Endpoint | Description |
 |---|---|---|
-| POST | `/auth/register` | Register a new user |
-| POST | `/auth/login` | Log in an existing user |
+| POST | `/notes/register` | Register a new user |
+| POST | `/notes/login` | Log in an existing user |
 
 ### Notes Routes
 
