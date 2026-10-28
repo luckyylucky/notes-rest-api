@@ -1,79 +1,145 @@
 # 📝 Notes REST API
-A RESTful Notes API built using **Node.js**, **Express.js**, **MongoDB Atlas**, and **Mongoose**.
-The API allows users to create, read, update, and delete notes while following the MVC architecture and REST API principles.
 
-## Features
+A RESTful Notes API built using **Node.js, Express.js, MongoDB Atlas, and Mongoose**, following the **MVC architecture**.
 
+The API allows users to register, log in securely, and manage their personal notes through CRUD operations. It uses **JWT authentication** to protect routes and **bcrypt** to securely hash user passwords.
+
+## 🚀 Features
+
+- User Registration
+- User Login
+- JWT-Based Authentication
+- Protected Routes
+- Password Hashing using bcrypt
 - Create Notes
-- Read Notes
+- Get All Notes
 - Update Notes
 - Delete Notes
 - MongoDB Atlas Integration
 - Mongoose Schema Validation
-- RESTful API Architecture
+- MVC Architecture
 - Environment Variables using dotenv
-- Error Handling
+- Centralized Error Handling
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-- Node.js
-- Express.js
-- MongoDB Atlas
-- Mongoose
-- Postman
-- Git
-- GitHub
+- **Runtime:** Node.js
+- **Backend Framework:** Express.js
+- **Database:** MongoDB Atlas
+- **ODM:** Mongoose
+- **Authentication:** JSON Web Token (JWT)
+- **Password Security:** bcrypt
+- **API Testing:** Postman
+- **Version Control:** Git and GitHub
+- **Deployment:** Render
 
-## 🚀 Installation
+## 📂 Project Setup
 
-Clone the repository
+### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/luckyyylucky/notes-rest-api.git
 ```
-Install dependencies
+
+### 2. Navigate to the Project Directory
+
+```bash
+cd notes-rest-api
+```
+
+### 3. Install Dependencies
+
 ```bash
 npm install
 ```
-Create a `.env` file
-Start the server
+
+### 4. Configure Environment Variables
+
+Create a `.env` file in the root directory and add the following variables:
+
+```env
+PORT=3000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+```
+
+Replace the placeholder values with your own configuration.
+
+
+### 5. Start the Server
+
 ```bash
 node server.js
 ```
 
-## Environment Variables
-Create a `.env` file in the project root and add:
-```env
-MONGO_URI=<your_mongodb_connection_string>
+The server will start on the configured port.
+
+## 🔐 Authentication
+
+The API uses JWT (JSON Web Token) for authentication.
+
+- Users can register and log in.
+- Passwords are hashed using bcrypt before being stored.
+- After successful login, a JWT is generated.
+- Protected routes require a valid JWT.
+- The server verifies the token before allowing access to protected resources.
+
+### Authorization Header
+
+For protected endpoints, include the JWT in the request header:
+
+```http
+Authorization: Bearer <your_jwt_token>
 ```
 
-## API Endpoints
+## 📡 API Endpoints
+
+### Authentication Routes
+
 | Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | /notes | Create Note |
-| GET | /notes | Get All Notes |
-| PUT | /notes/:id | Update Note |
-| DELETE | /notes/:id | Delete Note |
+|---|---|---|
+| POST | `/auth/register` | Register a new user |
+| POST | `/auth/login` | Log in an existing user |
+
+### Notes Routes
+
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | `/notes` | Create a note |
+| GET | `/notes` | Get all notes |
+| PUT | `/notes/:id` | Update a note |
+| DELETE | `/notes/:id` | Delete a note |
+
+**Note:** Authentication is required for protected Notes routes.
+
+## 🧪 API Testing
+
+The API was tested using **Postman** to verify:
+
+- User registration and login
+- JWT token generation and authentication
+- Protected route access
+- Notes CRUD operations
+- API responses and error handling
 
 ## 📌 Project Highlights
 
-- Built using MVC Architecture
-- Connected to MongoDB Atlas Cloud Database
-- RESTful API Design
-- Schema Validation using Mongoose
-- Tested using Postman
-
-##  Future Improvements
-- User Authentication using JWT
-- Password Encryption using bcrypt
-- Pagination
-- Search Notes
-- Filter Notes
+- Implemented RESTful APIs using Express.js.
+- Followed MVC architecture for code organization.
+- Integrated MongoDB Atlas using Mongoose.
+- Implemented JWT-based authentication and protected routes.
+- Secured user passwords using bcrypt hashing.
+- Added schema validation and centralized error handling.
+- Tested API endpoints using Postman.
+- Deployed the backend on Render.
 
 ## 🌐 Live API
-Render Deployment:
+
+**Render Deployment:**  
 https://notes-rest-api-tgum.onrender.com
 
 ## 👨‍💻 Author
-Lucky Rupreja
-GitHub:
-https://github.com/luckylucky
+
+**Lucky Rupreja**
+
+- GitHub: https://github.com/luckyylucky
