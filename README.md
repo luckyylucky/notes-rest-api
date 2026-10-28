@@ -107,8 +107,8 @@ Authorization: Bearer <your_jwt_token>
 |---|---|---|
 | POST | `/notes` | Create a note |
 | GET | `/notes` | Get all notes |
-| PUT | `/notes/:id` | Update a note |
-| DELETE | `/notes/:id` | Delete a note |
+| PUT | `/notes/id` | Update a note |
+| DELETE | `/notes/id` | Delete a note |
 
 **Note:** Authentication is required for protected Notes routes.
 
